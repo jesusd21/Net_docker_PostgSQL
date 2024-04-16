@@ -1,0 +1,29 @@
+version: '3.4'
+networks:
+  withpostgressql:
+services:
+  basepostgressql:
+    image: ${DOCKER_REGISTRY-}basepostgressql
+    build:
+      context: .
+      dockerfile: BasePostgresSql/Dockerfile
+    networks:
+      - withpostgressql
+    depends_on:
+      - postgressql
+    environment:
+      CONNECTION_STRING: "server=postgressql;database=dbpostgressql;user id=postgres;password=Password123#;IntegratedSecurity=true;TrustServerCertificate=True;"
+      #importante !!
+      #para crear la base de datos se debe usar server=localhost
+      #para el momento de ejecucion server=postgressql
+
+  postgressql:
+    image: postgres:latest
+    restart: always
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=Password123#
+    ports:
+      - '5432:5432'
+    networks:
+      - withpostgressql

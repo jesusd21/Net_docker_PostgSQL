@@ -1,0 +1,36 @@
+name: dockercompose719701890993905173
+services:
+  basepostgressql:
+    build:
+      context: C:\Users\jesus.ramirez\Documents\Jesus\Base\BaseWithSqlServer\BasePostgresSql
+      dockerfile: BasePostgresSql/Dockerfile
+    depends_on:
+      postgressql:
+        condition: service_started
+        required: true
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      CONNECTION_STRING: server=postgressql;database=dbpostgressql;user id=postgres;password=Password123#;IntegratedSecurity=true;TrustServerCertificate=True;
+    image: basepostgressql
+    networks:
+      withpostgressql: null
+    ports:
+    - mode: ingress
+      target: 80
+      protocol: tcp
+  postgressql:
+    environment:
+      POSTGRES_PASSWORD: Password123#
+      POSTGRES_USER: postgres
+    image: postgres:latest
+    networks:
+      withpostgressql: null
+    ports:
+    - mode: ingress
+      target: 5432
+      published: "5432"
+      protocol: tcp
+    restart: always
+networks:
+  withpostgressql:
+    name: dockercompose719701890993905173_withpostgressql

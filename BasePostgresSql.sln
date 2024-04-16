@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34024.191
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasePostgresSql", "BasePostgresSql\BasePostgresSql.csproj", "{A5A9191B-89AD-49AE-9911-4E8325C461FE}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{506C433B-B3EB-47FF-8D3D-81DE82E2198D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A5A9191B-89AD-49AE-9911-4E8325C461FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5A9191B-89AD-49AE-9911-4E8325C461FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5A9191B-89AD-49AE-9911-4E8325C461FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5A9191B-89AD-49AE-9911-4E8325C461FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{506C433B-B3EB-47FF-8D3D-81DE82E2198D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{506C433B-B3EB-47FF-8D3D-81DE82E2198D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{506C433B-B3EB-47FF-8D3D-81DE82E2198D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{506C433B-B3EB-47FF-8D3D-81DE82E2198D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FBA0F608-D793-49B0-BBE5-857A3D5E5B36}
+	EndGlobalSection
+EndGlobal
